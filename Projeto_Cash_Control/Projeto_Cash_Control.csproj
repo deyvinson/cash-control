@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ED5AFE13-BE17-4E79-994C-522277DA61F1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Projeto_Cash_Control</RootNamespace>
+    <AssemblyName>Projeto_Cash_Control</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Npgsql">
+      <HintPath>dll\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdmEditarPorID.aspx" />
+    <Content Include="AdmGerenciarItens.aspx" />
+    <Content Include="AdmGerenciarUsuarios.aspx" />
+    <Content Include="UsrBalancoMensal.aspx" />
+    <Content Include="UsrCadastroUsuario.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="MasterPageUser.Master" />
+    <Content Include="MasterPageAdm.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UsrCategorias.aspx" />
+    <Content Include="UsrContas.aspx" />
+    <Content Include="UsrDespesas.aspx" />
+    <Content Include="UsrEditarCategoria.aspx" />
+    <Content Include="UsrEditarConta.aspx" />
+    <Content Include="UsrExtrato.aspx" />
+    <Content Include="UsrMeusDados.aspx" />
+    <Content Include="UsrNovaDespesa.aspx" />
+    <Content Include="UsrNovaReceita.aspx" />
+    <Content Include="UsrPaginaInicial.aspx" />
+    <Content Include="AdmPaginaInicial.aspx" />
+    <Content Include="UsrReceitas.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdmEditarPorID.aspx.cs">
+      <DependentUpon>AdmEditarPorID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdmEditarPorID.aspx.designer.cs">
+      <DependentUpon>AdmEditarPorID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdmGerenciarItens.aspx.cs">
+      <DependentUpon>AdmGerenciarItens.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdmGerenciarItens.aspx.designer.cs">
+      <DependentUpon>AdmGerenciarItens.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdmGerenciarUsuarios.aspx.cs">
+      <DependentUpon>AdmGerenciarUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdmGerenciarUsuarios.aspx.designer.cs">
+      <DependentUpon>AdmGerenciarUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Categoria.cs" />
+    <Compile Include="Conta.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="Operacao.cs" />
+    <Compile Include="UsrBalancoMensal.aspx.cs">
+      <DependentUpon>UsrBalancoMensal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsrBalancoMensal.aspx.designer.cs">
+      <DependentUpon>UsrBalancoMensal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsrCadastroUsuario.aspx.cs">
+      <DependentUpon>UsrCadastroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsrCadastroUsuario.aspx.designer.cs">
+      <DependentUpon>UsrCadastroUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPageAdm.Master.cs">
+      <DependentUpon>MasterPageAdm.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPageAdm.Master.designer.cs">
+      <DependentUpon>MasterPageAdm.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPageUser.Master.cs">
+      <DependentUpon>MasterPageUser.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPageUser.Master.designer.cs">
+      <DependentUpon>MasterPageUser.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UsrCategorias.aspx.cs">
+      <DependentUpon>UsrCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsrCategorias.aspx.designer.cs">
+      <DependentUpon>UsrCategorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsrContas.aspx.cs">
+      <DependentUpon>UsrContas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsrContas.aspx.designer.cs">
+      <DependentUpon>UsrContas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsrDespesas.aspx.cs">
+      <DependentUpon>UsrDespesas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsrDespesas.aspx.designer.cs">
+      <DependentUpon>UsrDespesas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsrEditarCategoria.aspx.cs">
+      <DependentUpon>UsrEditarCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsrEditarCategoria.aspx.designer.cs">
+      <DependentUpon>UsrEditarCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsrEditarConta.aspx.cs">
+      <DependentUpon>UsrEditarConta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsrEditarConta.aspx.designer.cs">
+      <DependentUpon>UsrEditarConta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsrExtrato.aspx.cs">
+      <DependentUpon>UsrExtrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsrExtrato.aspx.designer.cs">
+      <DependentUpon>UsrExtrato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsrMeusDados.aspx.cs">
+      <DependentUpon>UsrMeusDados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsrMeusDados.aspx.designer.cs">
+      <DependentUpon>UsrMeusDados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsrNovaDespesa.aspx.cs">
+      <DependentUpon>UsrNovaDespesa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsrNovaDespesa.aspx.designer.cs">
+      <DependentUpon>UsrNovaDespesa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsrNovaReceita.aspx.cs">
+      <DependentUpon>UsrNovaReceita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsrNovaReceita.aspx.designer.cs">
+      <DependentUpon>UsrNovaReceita.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsrPaginaInicial.aspx.cs">
+      <DependentUpon>UsrPaginaInicial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsrPaginaInicial.aspx.designer.cs">
+      <DependentUpon>UsrPaginaInicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdmPaginaInicial.aspx.cs">
+      <DependentUpon>AdmPaginaInicial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdmPaginaInicial.aspx.designer.cs">
+      <DependentUpon>AdmPaginaInicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsrReceitas.aspx.cs">
+      <DependentUpon>UsrReceitas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsrReceitas.aspx.designer.cs">
+      <DependentUpon>UsrReceitas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49253</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49253/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

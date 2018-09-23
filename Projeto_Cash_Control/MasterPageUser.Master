@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPageUser.master.cs" Inherits="Projeto_Cash_Control.MasterPageUser" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+    <title>Cash Control</title>
+    <asp:ContentPlaceHolder ID="PageHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body style="overflow-y: scroll">
+    <form id="form1" runat="server">
+
+        <header class="navbar navbar-expand-lg navbar-dark flex-column flex-md-row bd-navbar fixed-top border-bottom" style="background-color: #008B8B; color: white; max-height: 50px">
+            <a class="navbar-brand">Cash Control</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="UsrPaginaInicial.aspx">Resumo</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownNovo" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Novo
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="UsrNovaReceita.aspx">Nova receita...</a>
+                            <a class="dropdown-item" href="UsrNovaDespesa.aspx">Nova despesa...</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownVisualizar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Visualizar
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="UsrExtrato.aspx">Extrato</a>
+                            <a class="dropdown-item" href="UsrReceitas.aspx">Receitas</a>
+                            <a class="dropdown-item" href="UsrDespesas.aspx">Despesas</a>
+                        </div>
+
+                    </li>
+
+                    <!--<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownGerenciar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gerenciar
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="UsrCategorias.aspx">Categorias</a>
+                            <a class="dropdown-item" href="UsrContas.aspx">Contas</a>
+                        </div>
+                    </li>-->
+                </ul>
+
+                <div class="form-inline my-2 my-lg-0" runat="server">
+                    <p style="color: white; padding-top: 15px">
+                        
+                    </p>                  
+                        <div class=" nav-item dropleft" style="padding-right:0px">
+                            <button class="btn btn-outline-light dropdown-toggle my-2 my-sm-0" style="padding-right:10px" type="button" id="btnGerenciarConta" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" runat="server"><asp:Literal ID="txtUsuarioLogado" runat="server"></asp:Literal></button>
+                            <div class="dropdown-menu" aria-labelledby="btnGerenciarConta">
+                                <a class="dropdown-item" href="UsrCategorias.aspx">Minhas Categorias</a>
+                                <a class="dropdown-item" href="UsrContas.aspx">Minhas Contas</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="UsrMeusDados.aspx">Meus Dados</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" id="lnkSair" runat="server" onserverclick="btnLogout_ServerClick">Sair</a>
+
+                            </div>
+                        </div>
+                    
+                    <!--<div style="padding-left: 3px">
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit" id="btnLogout" runat="server" onserverclick="btnLogout_ServerClick">Sair</button>
+                    </div>-->
+
+                </div>
+            </div>
+        </header>
+
+        <!-- <div class="row " style="max-width: 100%; padding-top: 40px"-->
+        >
+
+           <!-- <div class="col-md-2">
+                <nav class="navbar position-fixed " style="padding-top: 20px; padding-left: 30px; padding-right: 30px; max-height: 100%; min-width: 200px; color: #008B8B; font-size: 24px">
+                    <div>
+                        <a class="nav-link" href="UsrPaginaInicial.aspx" style="font-size: 20px; min-width: 100%; color: #008B8B"><b>RESUMO</b></a> <br />                        
+                        <a class="nav-link" href="UsrReceitas.aspx" style="font-size: 20px; color: #008B8B"><b>RECEITAS</b></a> <br />
+                        <a class="nav-link" href="UsrDespesas.aspx" style="font-size: 20px; color: #008B8B"><b>DESPESAS</b></a> <br />
+                        <a class="nav-link" href="UsrContas.aspx" style="font-size: 20px; color: #008B8B"><b>CONTAS</b></a> <br />
+                        <a class="nav-link" href="UsrCategorias.aspx" style="font-size: 20px; color: #008B8B"><b>CATEGORIAS</b></a> <br /><br /><br />
+                    </div>
+                </nav>
+            </div> -
+
+            <div class="col-md-1">
+            </div> -->
+
+        <div style="max-width: 100%; padding-top: 20px">
+            <asp:ContentPlaceHolder ID="PageBody" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+</body>
+</html>
