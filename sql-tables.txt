@@ -1,0 +1,89 @@
+create table usuarios (
+
+
+id serial primary key NOT NULL,
+
+nome varchar(60) NOT NULL,
+sobrenome varchar(60),
+
+email varchar(200) NOT NULL,
+
+senha varchar(250) NOT NULL,
+
+perfil varchar(15),
+
+dataCriacao timestamp,
+
+ativo boolean,
+
+dataDesativado timestamp
+
+
+);
+
+
+
+
+INSERT INTO usuarios (nome, email, senha, perfil, dataCriacao, ativo) values ('Administrador', 'admin', '21232F297A57A5A743894A0E4A801FC3', 'Administrador', '2018-04-17 20:00:00', true);
+
+
+
+
+create table contas (
+
+
+id serial primary key NOT NULL,
+
+descricao varchar(30) NOT NULL,
+
+saldo real default 0,
+
+id_usuario int,
+
+ativo boolean
+
+
+);
+
+
+
+
+create table operacoes (
+
+
+id serial primary key NOT NULL,
+
+descricao varchar(30) NOT NULL,
+
+dataHora timestamp,
+
+categoria varchar(30),
+
+conta varchar(30),
+
+tipo varchar(7),
+
+valor real,
+
+id_usuario int,
+
+ativo boolean
+
+);
+
+
+
+create table categorias (
+
+
+id serial primary key NOT NULL,
+
+descricao varchar(30) NOT NULL,
+
+tipo varchar(7),
+
+id_usuario int,
+
+ativo boolean
+
+);
