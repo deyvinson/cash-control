@@ -1,0 +1,22 @@
+APRESENTAÇÃO
+
+CASH CONTROL é um projeto desenvolvido para fins acadêmicos, para conclusão de uma unidade curricular do meu curso técnico.
+
+Seguem as funcionalidades. Tudo testado, mas não está livre de bugs:
+- Login de usuário;
+- Controle de receitas e despesas;
+- Organização por categorias;
+- Possibilidade de inclusão de contas (carteira, banco, poupança, etc.);
+- Visualização do movimento por mês;
+
+O projeto foi programado utilizando o banco de dados do PostgreSQL.
+
+Implementações futuras:
+- Validação de email;
+- Gerenciamento de dados pessoais;
+- Transferências entre contas;
+- Pesquisar por período personalizado;
+
+
+Não tenho planos de continuar a trabalhar nesse projeto, mas quem sabe ;)
+
